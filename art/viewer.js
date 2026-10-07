@@ -33,6 +33,7 @@
         const p = pieces[at];
         img.style.width = img.style.height = "";
         img.src = p.getAttribute("href");
+        img.classList.toggle("lift", p.classList.contains("lift"));
         img.alt = p.dataset.title || "";
         title.textContent = p.dataset.title || "";
         meta.textContent = p.dataset.info || "";

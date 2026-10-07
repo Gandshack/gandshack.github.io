@@ -30,6 +30,7 @@
                                     <li class="sub"><a href="../art/creatures.html">Creatures</a></li>
                                     <li class="sub"><a href="../art/characters.html">Characters</a></li>
                                     <li class="sub"><a href="../art/lit.html" class="here">Lit props</a></li>
+                                    <li class="sub"><a href="../art/gallery.html">Gallery</a></li>
                                     <li><a href="../hire.html">Hire me</a></li>
                             </ul>
                         </nav>
@@ -40,10 +41,12 @@
 <p class="blurb">Every prop here has a <b>hand-painted normal map</b>, so it reacts to real lights in Unity or Godot instead of looking flat.</p>
 <h2>Try it: move the light</h2>
 <div id="light-demo">
-    <div class="demo-tabs" id="demo-tabs"></div>
-    <div class="demo-view" id="demo-view">
-        <button data-mode="lit" class="on">Lit</button>
-        <button data-mode="overlay">Normal overlay</button>
+    <div class="demo-row"><span class="demo-label">Prop</span><div class="demo-tabs" id="demo-tabs"></div></div>
+    <div class="demo-row demo-view" id="demo-view">
+        <span class="demo-label">View</span>
+        <div class="segmented">
+            <button data-mode="lit" class="on">Lit</button><button data-mode="overlay">Normal overlay</button>
+        </div>
         <input type="range" id="demo-mix" min="0" max="100" value="50" aria-label="overlay amount" />
         <label><input type="checkbox" id="demo-normals" checked /> use the normal map</label>
     </div>
@@ -57,7 +60,7 @@
 <a class="piece" href="../images/work/the_box_glass.png" data-title="The box" data-info="128×128 px"><img src="../images/work/the_box_glass.png" width="128" height="128" alt="The box" loading="lazy" /><span>The box</span></a>
 </div>
 
-<h2>Props: base → normal map → lit</h2>
+<h2>Props: base &gt; normal map &gt; lit</h2>
 <div class="lit-table">
 <div class="lit-row"><b>Dresser</b><a class="piece" href="../images/work/lit/dresser_base.png" data-title="Dresser · base color" data-info="64×40 px"><img src="../images/work/lit/dresser_base.png" width="128" height="80" alt="Dresser · base color" loading="lazy" /><span>Dresser · base color</span></a><a class="piece" href="../images/work/lit/dresser_normal.png" data-title="Dresser · normal map" data-info="hand-painted · 64×40 px"><img src="../images/work/lit/dresser_normal.png" width="128" height="80" alt="Dresser · normal map" loading="lazy" /><span>Dresser · normal map</span></a><a class="piece" href="../images/work/lit/dresser_lit.png" data-title="Dresser · lit" data-info="preview · 64×40 px"><img src="../images/work/lit/dresser_lit.png" width="128" height="80" alt="Dresser · lit" loading="lazy" /><span>Dresser · lit</span></a></div>
 <div class="lit-row"><b>Window</b><a class="piece" href="../images/work/lit/window_base.png" data-title="Window · base color" data-info="128×96 px"><img src="../images/work/lit/window_base.png" width="128" height="96" alt="Window · base color" loading="lazy" /><span>Window · base color</span></a><a class="piece" href="../images/work/lit/window_normal.png" data-title="Window · normal map" data-info="hand-painted · 128×96 px"><img src="../images/work/lit/window_normal.png" width="128" height="96" alt="Window · normal map" loading="lazy" /><span>Window · normal map</span></a><a class="piece" href="../images/work/lit/window_lit.png" data-title="Window · lit" data-info="preview · 128×96 px"><img src="../images/work/lit/window_lit.png" width="128" height="96" alt="Window · lit" loading="lazy" /><span>Window · lit</span></a></div>

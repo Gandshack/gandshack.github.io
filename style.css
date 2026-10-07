@@ -122,10 +122,10 @@ footer {
     --dirt: #794100;
 }
 
-/* nav = the dirt-and-grass ground from the header, content = palette black framed by the waterfall */
+/* nav: palette black framed by the darker gold of "Online!" */
 nav {
-    background: var(--dirt);
-    border-top: 8px solid var(--grass);
+    background: var(--black);
+    border: 4px solid var(--gold);
 }
 
 main {
@@ -183,12 +183,15 @@ nav li.sub {
 }
 
 nav a.here {
-    color: var(--yellow);
     font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: var(--yellow);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
 }
 
 nav a:hover {
-    color: var(--grass);
+    color: var(--foam);
 }
 
 /* gallery pieces: black tiles with the sidebar grey as a hard pixel border */
@@ -222,6 +225,12 @@ nav a:hover {
 
 .piece span {
     margin-top: 10px;
+}
+
+/* for sprites with black bodies (e.g. Maska) */
+.piece.lift,
+#viewer img.lift {
+    background: #1a1a1a;
 }
 
 .piece:hover,
@@ -360,48 +369,87 @@ nav a:hover {
     border: 4px solid var(--grey);
 }
 
-.demo-tabs button,
-.demo-view button {
+/* two kinds of controls look different: props are separate tabs, the view is one joined switch */
+.demo-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 10px;
+    margin-bottom: 8px;
+}
+
+.demo-label {
+    width: 44px;
+    color: var(--light-grey);
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.demo-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    flex: 1;
+}
+
+.demo-tabs button {
     background: var(--grey);
     color: white;
     border: none;
     padding: 6px 12px;
-    margin: 0 6px 6px 0;
     cursor: pointer;
     font: inherit;
 }
 
-.demo-tabs button:hover,
-.demo-view button:hover {
+.demo-tabs button:hover {
     background: var(--light-grey);
     color: var(--black);
 }
 
-.demo-tabs button.on,
-.demo-view button.on {
+.demo-tabs button.on {
     background: var(--gold);
     color: var(--black);
 }
 
-.demo-view {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 4px 6px;
+.segmented {
+    display: inline-flex;
+    border: 2px solid var(--water);
+}
+
+.segmented button {
+    background: var(--black);
+    color: var(--foam);
+    border: none;
+    padding: 6px 14px;
+    cursor: pointer;
+    font: inherit;
+}
+
+.segmented button + button {
+    border-left: 2px solid var(--water);
+}
+
+.segmented button:hover {
+    color: white;
+}
+
+.segmented button.on {
+    background: var(--water);
+    color: white;
 }
 
 .demo-view label {
     color: var(--light-grey);
-    margin-left: 6px;
 }
 
 #demo-mix {
-    accent-color: var(--gold);
+    accent-color: var(--water);
     width: 160px;
 }
 
 #light-demo input[type="checkbox"] {
-    accent-color: var(--gold);
+    accent-color: var(--water);
 }
 
 /* big viewer */
@@ -469,6 +517,14 @@ nav a:hover {
     right: 10px;
     height: auto;
     font-size: 32px;
+}
+
+/* black box behind the footer text so the waterfall background doesn't run through it */
+footer p {
+    display: inline-block;
+    margin: 0;
+    padding: 8px 14px;
+    background: var(--black);
 }
 
 footer a {
