@@ -1,0 +1,17 @@
+tools/
+*.aseprite
+*.kra
+# raw source assets: not used by any page, keep them off the public site
+images/work/props/
+images/work/explosion.gif
+images/work/explosion_3x.gif
+images/work/flower_monster.png
+images/work/flower_monster_4x.gif
+images/work/tall_walk_4x.gif
+images/work/player_back_anim.png
+images/work/player_front_anim.png
+images/work/the_box.png
+images/work/walker1.png
+images/work/walker2.png
+images/work/walker4.png
+images/work/walker_damaged3.png

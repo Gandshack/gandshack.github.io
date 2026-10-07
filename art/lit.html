@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Lit Environments & Props · Osii</title>
+        <meta name="description" content="I make pixel art monsters and animations for indie games, lit with hand-painted normal maps so they react to your game&#x27;s lighting." />
+        <link href="../style.css" rel="stylesheet" type="text/css" media="all" />
+        <link rel="icon" type="image/png" href="../images/favicon.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Lit Environments &amp; Props · Osii" />
+        <meta property="og:description" content="I make pixel art monsters and animations for indie games, lit with hand-painted normal maps so they react to your game&#x27;s lighting." />
+        <meta property="og:url" content="https://gandshack.github.io/art/lit.html" />
+        <meta property="og:image" content="https://gandshack.github.io/images/og.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+    </head>
+    <body>
+        <header>
+            <a href="../index.html"><img src="../images/Header.gif" width="100%" alt="Osii Online" style="image-rendering: pixelated" /></a>
+        </header>
+
+        <div id="container">
+            <div class="flex">
+                <aside>
+                    <div class="side-sticky">
+                        <nav>
+                            <ul>
+                                    <li><a href="../index.html">Home</a></li>
+                                    <li><a href="../art/main.html">Art</a></li>
+                                    <li class="sub"><a href="../art/creatures.html">Creatures</a></li>
+                                    <li class="sub"><a href="../art/characters.html">Characters</a></li>
+                                    <li class="sub"><a href="../art/lit.html" class="here">Lit props</a></li>
+                                    <li><a href="../hire.html">Hire me</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </aside>
+                <main>
+<h1>Lit Environments &amp; Props</h1>
+<p class="blurb">Every prop here has a <b>hand-painted normal map</b>, so it reacts to real lights in Unity or Godot instead of looking flat.</p>
+<h2>Try it: move the light</h2>
+<div id="light-demo">
+    <div class="demo-tabs" id="demo-tabs"></div>
+    <div class="demo-view" id="demo-view">
+        <button data-mode="lit" class="on">Lit</button>
+        <button data-mode="overlay">Normal overlay</button>
+        <input type="range" id="demo-mix" min="0" max="100" value="50" aria-label="overlay amount" />
+        <label><input type="checkbox" id="demo-normals" checked /> use the normal map</label>
+    </div>
+    <canvas id="demo-canvas" width="512" height="320"></canvas>
+    <p class="blurb" id="demo-hint">Move your mouse (or finger) over the prop. Untick the box to see the same light without a normal map.</p>
+</div>
+<h2>Scenes</h2><div class="gallery">
+<a class="piece" href="../images/work/GasStationRender.png" data-title="Gas station" data-info="night scene · 256×256 px"><img src="../images/work/GasStationRender.png" width="150" height="150" alt="Gas station" loading="lazy" /><span>Gas station</span></a>
+<a class="piece" href="../images/work/Ded Love In October.png" data-title="Ded Love in October" data-info="128×128 px"><img src="../images/work/Ded Love In October.png" width="128" height="128" alt="Ded Love in October" loading="lazy" /><span>Ded Love in October</span></a>
+<a class="piece" href="../images/work/Deus caritas est.png" data-title="Deus caritas est" data-info="192×256 px"><img src="../images/work/Deus caritas est.png" width="112" height="150" alt="Deus caritas est" loading="lazy" /><span>Deus caritas est</span></a>
+<a class="piece" href="../images/work/the_box_glass.png" data-title="The box" data-info="128×128 px"><img src="../images/work/the_box_glass.png" width="128" height="128" alt="The box" loading="lazy" /><span>The box</span></a>
+</div>
+
+<h2>Props: base → normal map → lit</h2>
+<div class="lit-table">
+<div class="lit-row"><b>Dresser</b><a class="piece" href="../images/work/lit/dresser_base.png" data-title="Dresser · base color" data-info="64×40 px"><img src="../images/work/lit/dresser_base.png" width="128" height="80" alt="Dresser · base color" loading="lazy" /><span>Dresser · base color</span></a><a class="piece" href="../images/work/lit/dresser_normal.png" data-title="Dresser · normal map" data-info="hand-painted · 64×40 px"><img src="../images/work/lit/dresser_normal.png" width="128" height="80" alt="Dresser · normal map" loading="lazy" /><span>Dresser · normal map</span></a><a class="piece" href="../images/work/lit/dresser_lit.png" data-title="Dresser · lit" data-info="preview · 64×40 px"><img src="../images/work/lit/dresser_lit.png" width="128" height="80" alt="Dresser · lit" loading="lazy" /><span>Dresser · lit</span></a></div>
+<div class="lit-row"><b>Window</b><a class="piece" href="../images/work/lit/window_base.png" data-title="Window · base color" data-info="128×96 px"><img src="../images/work/lit/window_base.png" width="128" height="96" alt="Window · base color" loading="lazy" /><span>Window · base color</span></a><a class="piece" href="../images/work/lit/window_normal.png" data-title="Window · normal map" data-info="hand-painted · 128×96 px"><img src="../images/work/lit/window_normal.png" width="128" height="96" alt="Window · normal map" loading="lazy" /><span>Window · normal map</span></a><a class="piece" href="../images/work/lit/window_lit.png" data-title="Window · lit" data-info="preview · 128×96 px"><img src="../images/work/lit/window_lit.png" width="128" height="96" alt="Window · lit" loading="lazy" /><span>Window · lit</span></a></div>
+<div class="lit-row"><b>Bookshelf</b><a class="piece" href="../images/work/lit/bookshelf_base.png" data-title="Bookshelf · base color" data-info="64×64 px"><img src="../images/work/thumbs/lit_bookshelf_base.png" width="64" height="128" alt="Bookshelf · base color" loading="lazy" /><span>Bookshelf · base color</span></a><a class="piece" href="../images/work/lit/bookshelf_normal.png" data-title="Bookshelf · normal map" data-info="hand-painted · 64×64 px"><img src="../images/work/lit/bookshelf_normal.png" width="128" height="128" alt="Bookshelf · normal map" loading="lazy" /><span>Bookshelf · normal map</span></a><a class="piece" href="../images/work/lit/bookshelf_lit.png" data-title="Bookshelf · lit" data-info="preview · 64×64 px"><img src="../images/work/thumbs/lit_bookshelf_lit.png" width="64" height="128" alt="Bookshelf · lit" loading="lazy" /><span>Bookshelf · lit</span></a></div>
+<div class="lit-row"><b>Candle</b><a class="piece" href="../images/work/lit/candle_base.png" data-title="Candle · base color" data-info="32×32 px"><img src="../images/work/thumbs/lit_candle_base.png" width="100" height="145" alt="Candle · base color" loading="lazy" /><span>Candle · base color</span></a><a class="piece" href="../images/work/lit/candle_normal.png" data-title="Candle · normal map" data-info="hand-painted · 32×32 px"><img src="../images/work/lit/candle_normal.png" width="128" height="128" alt="Candle · normal map" loading="lazy" /><span>Candle · normal map</span></a><a class="piece" href="../images/work/lit/candle_lit.png" data-title="Candle · lit" data-info="preview · 32×32 px"><img src="../images/work/thumbs/lit_candle_lit.png" width="100" height="145" alt="Candle · lit" loading="lazy" /><span>Candle · lit</span></a></div>
+<div class="lit-row"><b>Cornice</b><a class="piece" href="../images/work/lit/cornice_base.png" data-title="Cornice · base color" data-info="96×96 px"><img src="../images/work/thumbs/lit_cornice_base.png" width="132" height="138" alt="Cornice · base color" loading="lazy" /><span>Cornice · base color</span></a><a class="piece" href="../images/work/lit/cornice_normal.png" data-title="Cornice · normal map" data-info="hand-painted · 96×96 px"><img src="../images/work/lit/cornice_normal.png" width="96" height="96" alt="Cornice · normal map" loading="lazy" /><span>Cornice · normal map</span></a><a class="piece" href="../images/work/lit/cornice_lit.png" data-title="Cornice · lit" data-info="preview · 96×96 px"><img src="../images/work/thumbs/lit_cornice_lit.png" width="132" height="138" alt="Cornice · lit" loading="lazy" /><span>Cornice · lit</span></a></div>
+<div class="lit-row"><b>Grace (character normals)</b><a class="piece" href="../images/work/lit/grace_base.png" data-title="Grace (character normals) · base color" data-info="96×96 px"><img src="../images/work/thumbs/lit_grace_base.png" width="46" height="130" alt="Grace (character normals) · base color" loading="lazy" /><span>Grace (character normals) · base color</span></a><a class="piece" href="../images/work/lit/grace_normal.png" data-title="Grace (character normals) · normal map" data-info="hand-painted · 96×96 px"><img src="../images/work/lit/grace_normal.png" width="96" height="96" alt="Grace (character normals) · normal map" loading="lazy" /><span>Grace (character normals) · normal map</span></a><a class="piece" href="../images/work/lit/grace_lit.png" data-title="Grace (character normals) · lit" data-info="preview · 96×96 px"><img src="../images/work/thumbs/lit_grace_lit.png" width="46" height="130" alt="Grace (character normals) · lit" loading="lazy" /><span>Grace (character normals) · lit</span></a></div>
+<div class="lit-row"><b>Cup</b><a class="piece" href="../images/work/lit/cup_base.png" data-title="Cup · base color" data-info="16×16 px"><img src="../images/work/thumbs/lit_cup_base.png" width="120" height="140" alt="Cup · base color" loading="lazy" /><span>Cup · base color</span></a><a class="piece" href="../images/work/lit/cup_normal.png" data-title="Cup · normal map" data-info="hand-painted · 16×16 px"><img src="../images/work/lit/cup_normal.png" width="144" height="144" alt="Cup · normal map" loading="lazy" /><span>Cup · normal map</span></a><a class="piece" href="../images/work/lit/cup_lit.png" data-title="Cup · lit" data-info="preview · 16×16 px"><img src="../images/work/thumbs/lit_cup_lit.png" width="120" height="140" alt="Cup · lit" loading="lazy" /><span>Cup · lit</span></a></div>
+</div>
+
+                </main>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2026 Osii · <a href="mailto:OsiiMakesArt@proton.me">OsiiMakesArt@proton.me</a></p>
+        </footer>
+        <script src="../art/light-data.js"></script>
+        <script src="../art/light-demo.js"></script>
+        <script src="../art/viewer.js"></script>
+    </body>
+</html>

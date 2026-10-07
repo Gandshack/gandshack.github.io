@@ -1,0 +1,523 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    image-rendering: pixelated;
+    background-image: url("images/side_falls.gif");
+    background-size: 100%;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+header img {
+    display: block;
+}
+/* Style the header */
+header {
+    background-color: black;
+    color: white;
+    padding: 0px;
+    text-align: center;
+    font-size: 35px;
+}
+
+#container {
+    padding: 24px;
+    margin: auto;
+}
+
+.flex {
+    justify-content: center; /* centers main+aside as a group in the row */
+    flex-wrap: wrap;
+    display: flex;
+    max-width: 100%;
+    margin: auto;
+}
+
+/* Container for flexboxes */
+section {
+    display: -webkit-flex;
+    display: flex;
+}
+
+.side-sticky {
+    position: sticky;
+    top: 20px;
+}
+/* Style the navigation menu */
+nav {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background: #797979;
+    padding: 20px;
+    margin: 10px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+main {
+    min-width: 40vw;
+    max-width: 40vw;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(7, 7, 15);
+    color: white;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Style the content */
+article {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+
+/* Style the footer */
+footer {
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+#art {
+    border-color: white;
+    border: solid;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    section {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+/* ---------- portfolio additions ---------- */
+/* colors come straight from Header.gif / side_falls.gif (NES palette) */
+:root {
+    --black: #000000;
+    --panel: #000000;
+    --grey: #797979;
+    --light-grey: #a2a2a2;
+    --water: #4192c3;
+    --foam: #a2fff3;
+    --gold: #ffa200;
+    --yellow: #ebd320;
+    --grass: #9aeb00;
+    --dirt: #794100;
+}
+
+/* nav = the dirt-and-grass ground from the header, content = palette black framed by the waterfall */
+nav {
+    background: var(--dirt);
+    border-top: 8px solid var(--grass);
+}
+
+main {
+    min-width: 0;
+    max-width: none;
+    width: min(960px, 62vw);
+    padding: 8px 28px 28px;
+    line-height: 1.5;
+    background: var(--black);
+    border: 4px solid var(--water);
+}
+
+main a {
+    color: var(--foam);
+}
+
+main a:hover {
+    color: var(--gold);
+}
+
+h1,
+h2 {
+    margin-bottom: 6px;
+}
+
+h2 {
+    margin-top: 32px;
+    padding-bottom: 6px;
+    border-bottom: 4px solid var(--water);
+}
+
+.blurb {
+    color: var(--light-grey);
+    margin-top: 4px;
+}
+
+.pitch {
+    font-size: 1.15em;
+    border-left: 6px solid var(--gold);
+    padding-left: 12px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav li {
+    margin: 6px 0;
+}
+
+nav li.sub {
+    margin-left: 14px;
+    font-size: 0.9em;
+}
+
+nav a.here {
+    color: var(--yellow);
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--grass);
+}
+
+/* gallery pieces: black tiles with the sidebar grey as a hard pixel border */
+.gallery {
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 12px;
+}
+
+.piece {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 180px;
+    padding: 14px 10px 10px;
+    background: var(--black);
+    border: 4px solid var(--grey);
+    color: var(--light-grey);
+    text-decoration: none;
+    font-size: 0.85em;
+    text-align: center;
+}
+
+.piece img {
+    image-rendering: pixelated;
+    max-width: 100%;
+    height: auto;
+    margin: auto 0;
+}
+
+.piece span {
+    margin-top: 10px;
+}
+
+.piece:hover,
+.piece:focus {
+    border-color: var(--water);
+    color: white;
+}
+
+/* section cards */
+.sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin: 18px 0;
+}
+
+.section-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 18px 12px;
+    background: var(--black);
+    border: 4px solid var(--grey);
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.section-card img {
+    image-rendering: pixelated;
+    height: 192px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.section-card span {
+    color: var(--light-grey);
+    font-size: 0.85em;
+}
+
+.section-card:hover {
+    border-color: var(--water);
+}
+
+/* plain buttons */
+.button {
+    display: inline-block;
+    padding: 10px 18px;
+    margin: 4px 8px 8px 0;
+    background: var(--gold);
+    color: var(--black) !important;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.button:hover {
+    background: var(--yellow);
+}
+
+.button.ghost {
+    background: var(--water);
+    color: white !important;
+}
+
+.button.ghost:hover {
+    background: var(--foam);
+    color: var(--black) !important;
+}
+
+.cta {
+    margin-top: 24px;
+}
+
+.list li {
+    margin: 6px 0;
+}
+
+/* prices */
+.prices {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.prices th,
+.prices td {
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 2px solid var(--grey);
+}
+
+.prices th {
+    color: var(--light-grey);
+    font-weight: normal;
+}
+
+.prices td:last-child {
+    color: var(--yellow);
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* lit props */
+.lit-row {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.lit-row > b {
+    width: 110px;
+    align-self: center;
+}
+
+.lit-row .piece {
+    width: 160px;
+}
+
+#light-demo {
+    background: var(--black);
+    border: 4px solid var(--grey);
+    padding: 12px;
+}
+
+#demo-canvas {
+    width: 100%;
+    max-width: 640px;
+    display: block;
+    margin: 10px auto;
+    cursor: none;
+    touch-action: none;
+    image-rendering: pixelated;
+    background: var(--panel);
+    border: 4px solid var(--grey);
+}
+
+.demo-tabs button,
+.demo-view button {
+    background: var(--grey);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    margin: 0 6px 6px 0;
+    cursor: pointer;
+    font: inherit;
+}
+
+.demo-tabs button:hover,
+.demo-view button:hover {
+    background: var(--light-grey);
+    color: var(--black);
+}
+
+.demo-tabs button.on,
+.demo-view button.on {
+    background: var(--gold);
+    color: var(--black);
+}
+
+.demo-view {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 6px;
+}
+
+.demo-view label {
+    color: var(--light-grey);
+    margin-left: 6px;
+}
+
+#demo-mix {
+    accent-color: var(--gold);
+    width: 160px;
+}
+
+#light-demo input[type="checkbox"] {
+    accent-color: var(--gold);
+}
+
+/* big viewer */
+#viewer {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.94);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+#viewer.open {
+    display: flex;
+}
+
+#viewer figure {
+    margin: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#viewer img {
+    image-rendering: pixelated;
+    background: var(--panel);
+    border: 4px solid var(--grey);
+}
+
+#viewer figcaption {
+    color: white;
+    text-align: center;
+    margin-top: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+#viewer figcaption span,
+#viewer figcaption small {
+    color: var(--light-grey);
+}
+
+#viewer button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 48px;
+    cursor: pointer;
+    padding: 0 18px;
+    height: 100%;
+}
+
+#viewer button:hover {
+    color: var(--gold);
+}
+
+#viewer .v-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: auto;
+    font-size: 32px;
+}
+
+footer a {
+    color: var(--foam);
+}
+
+/* phones: menu on top, content full width */
+@media (max-width: 800px) {
+    #container {
+        padding: 10px;
+    }
+    .flex {
+        flex-direction: column;
+    }
+    aside,
+    main {
+        width: 100%;
+    }
+    nav {
+        margin: 0 0 10px;
+    }
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px 14px;
+        margin: 0;
+    }
+    nav li,
+    nav li.sub {
+        margin: 0;
+        font-size: 1em;
+    }
+    main {
+        padding: 6px 14px 20px;
+    }
+    .piece {
+        width: calc(50% - 6px);
+    }
+    .lit-row {
+        flex-wrap: wrap;
+    }
+    .lit-row > b {
+        width: 100%;
+    }
+    .lit-row .piece {
+        width: calc(33% - 7px);
+    }
+    #viewer button {
+        font-size: 34px;
+        padding: 0 6px;
+    }
+}
